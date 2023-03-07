@@ -1,0 +1,10 @@
+trigger:
+  branches:
+    include:
+      - master
+
+steps:
+  - checkout: self
+  - script: |
+      ls
+      echo "\n Hello World"
