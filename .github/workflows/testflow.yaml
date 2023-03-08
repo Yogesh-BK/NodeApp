@@ -25,3 +25,6 @@ jobs:
       - name: Tag docker image
         run: |
           docker tag nodeapp:latest $USERNAME/nodeapp:latest
+      - name: Push to docker
+        run: |
+          docker push $USERNAME/nodeapp:latest
