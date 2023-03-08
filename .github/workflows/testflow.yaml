@@ -7,8 +7,8 @@ jobs:
       ENV_VAR: hello-world
       SECOND_VAR: hello-world
     steps:
-      - name: checkout out current code using public action
-        uses: actions/checkout@v2
+      # - name: checkout out current code using public action
+      #   uses: actions/checkout@v2
       - name: get the list of files in our current directory and its subdirectory
         run: |
           pwd
