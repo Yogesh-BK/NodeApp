@@ -2,7 +2,7 @@ name: Sample workflow
 on:
   push:
     branches:
-      - master
+      - main
 env:
   USERNAME: ${{secrets.USERNAME}}
   PASSWORD: ${{secrets.PASSWORD}}
