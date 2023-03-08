@@ -1,10 +1,13 @@
 name: Sample workflow
-on: push
+on:
+  push:
+    branches:
+      - master
 env:
   USERNAME: ${{secrets.USERNAME}}
   PASSWORD: ${{secrets.PASSWORD}}
 jobs:
-  first-job:
+  build-and-push-dockerImage:
     runs-on: ubuntu-latest
     env:
       ENV_VAR: hello-world
@@ -28,3 +31,6 @@ jobs:
       - name: Push to docker
         run: |
           docker push $USERNAME/nodeapp:latest
+      - name: Logout docker
+        run: |
+          docker logout
