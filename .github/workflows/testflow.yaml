@@ -1,5 +1,8 @@
 name: Sample workflow
 on: push
+env:
+  USERNAME: ${{secrets.USERNAME}}
+  PASSWORD: ${{secrets.PASSWORD}}
 jobs:
   first-job:
     runs-on: ubuntu-latest
@@ -16,3 +19,6 @@ jobs:
       - name: Build docker image
         run: |
           docker build -t nodeapp .
+      - name: Login to docker
+        run: |
+          docker login --username $USERNAME --password $PASSWORD
