@@ -12,4 +12,4 @@ jobs:
       - name: get the list of files in our current directory and its subdirectory
         run: |
           pwd
-          ls -alR
+          ls
