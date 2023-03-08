@@ -22,3 +22,6 @@ jobs:
       - name: Login to docker
         run: |
           docker login --username $USERNAME --password $PASSWORD
+      - name: Tag docker image
+        run: |
+          docker tag nodeapp:latest $USERNAME/nodeapp:latest
